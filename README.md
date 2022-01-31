@@ -1,2 +1,3 @@
 # number-generator
-Random number generator - JavaScript
+Random Number Generator - JavaScript
+Extracted from Random Everything (randomeverything.net)
