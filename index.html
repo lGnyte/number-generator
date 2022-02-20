@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="numbers.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <form id="criterias">
+        <label for="number-of-values">Number of values:</label>
+        <input type="number" name="number-of-values" placeholder="1" id="number-of-values" value="1"><br>
+        <label for="min-value">Min:</label>
+        <input type="number" name="min-value" placeholder="1" id="min-value" value="1"><br>
+        <label for="max-value">Max:</label>
+        <input type="number" name="max-value" placeholder="100" id="max-value" value="100"><br>
+        <label for="decimals">Number of decimals:</label>
+        <input type="number" name="decimals" placeholder="0" id="decimals" value="0"><br>
+        <label>Select the character between generated values:</label><br>
+        <select id="sel" onchange="displayOperatorInput()">
+          <option value='1' selected>Default (Space)</option>
+          <option value='2'>New row (Enter)</option>
+          <option value='3'>Type your custom operator</option>
+        </select>
+        <input type="text" name="operator" id="operator-input" style="display:none;">
+      </form>
+      <h2 style="margin:0;">Your result:</h2>
+      <textarea class="output-box" id="result" rows="10" cols="40" disabled style="resize:none"></textarea><br>
+      <button type="submit" name="submit" style="position:absolute; font-size: 10px; padding:0" onclick="copyText()">Copy to clipboard</button><br>
+      <button type="submit" name="submit" id="submit" style="margin-left:15px;  margin-top: 5px;" onclick="generate()">Generate</button>
+      <button type="submit" name="submit" style="margin-left:15px;  margin-top: 5px;" onclick='document.getElementById("result").innerHTML = "" '>Reset</button>
+      <input type="checkbox" name="concat" checked>
+      <label for="concat">Delete previous numbers on new generate</label>
+    </div>
+  </body>
+</html>
